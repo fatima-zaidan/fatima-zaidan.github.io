@@ -6,7 +6,6 @@
     <title>Fatima Zaidan - AI Engineer</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        /* FIX 1: Add scroll-padding-top to prevent fixed header overlap */
         :root {
             scroll-padding-top: 100px; 
         }
@@ -95,6 +94,7 @@
             margin-top: 80px;
         }
 
+        /* HERO SECTION */
         .hero {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
@@ -102,22 +102,6 @@
             text-align: center;
             position: relative;
             overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="25" cy="25" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1.5" fill="rgba(255,255,255,0.1)"/><circle cx="90" cy="10" r="1" fill="rgba(255,255,255,0.1)"/></svg>');
-            animation: float 20s infinite linear;
-        }
-
-        @keyframes float {
-            0% { transform: translateY(0) rotate(0deg); }
-            100% { transform: translateY(-100px) rotate(360deg); }
         }
 
         .hero-content {
@@ -156,6 +140,7 @@
             box-shadow: 0 6px 20px rgba(0, 212, 170, 0.6);
         }
 
+        /* SECTIONS GENERAL */
         .section {
             padding: 4rem 0;
             background: white;
@@ -185,7 +170,7 @@
             border-radius: 2px;
         }
 
-        /* Professional Skills Grid */
+        /* PROFESSIONAL SKILLS */
         .pro-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -206,38 +191,10 @@
             box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
         }
 
-        .pro-main-card::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
-            animation: rotate 15s linear infinite;
-        }
-
-        @keyframes rotate {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        .pro-main-card .content {
-            position: relative;
-            z-index: 2;
-        }
-
         .pro-main-icon {
             font-size: 4rem;
             margin-bottom: 1.5rem;
             color: #00d4aa;
-            text-shadow: 0 0 20px rgba(0, 212, 170, 0.5);
-        }
-
-        .pro-main-card h3 {
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-            font-weight: 600;
         }
 
         .pro-side-card {
@@ -247,26 +204,6 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             text-align: center;
             transition: all 0.3s ease;
-            border: 2px solid transparent;
-            position: relative;
-        }
-
-        .pro-side-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, #00d4aa, #00a8e8);
-            border-radius: 15px;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            z-index: -1;
-        }
-
-        .pro-side-card:hover::before {
-            opacity: 0.1;
         }
 
         .pro-side-card:hover {
@@ -279,18 +216,6 @@
             font-size: 3rem;
             margin-bottom: 1rem;
             color: #667eea;
-            transition: all 0.3s ease;
-        }
-
-        .pro-side-card:hover .pro-side-icon {
-            color: #00d4aa;
-            transform: scale(1.1);
-        }
-
-        .pro-side-card h3 {
-            color: #2d3748;
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
         }
 
         .tech-stack {
@@ -309,12 +234,80 @@
             font-size: 0.9rem;
             font-weight: 500;
             transition: all 0.3s ease;
-            cursor: pointer;
         }
 
         .tech-tag:hover {
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(0, 212, 170, 0.4);
+        }
+
+        /* PROJECTS SECTION */
+        .projects-section {
+            background: #f8fafc;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+            border-color: #00d4aa;
+        }
+
+        .project-icon {
+            font-size: 2.5rem;
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+
+        .project-card h3 {
+            color: #2d3748;
+            font-size: 1.4rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .project-card p {
+            font-size: 1rem;
+            color: #4a5568;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-links a {
+            display: inline-block;
+            margin: 0 0.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            background: linear-gradient(135deg, #00d4aa, #00a8e8);
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .project-links a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 212, 170, 0.4);
+        }
+
+        /* RESUME + CONTACT + FOOTER */
+        .resume-section {
+            background: linear-gradient(135deg, #00d4aa 0%, #00a8e8 100%);
+            color: white;
+            text-align: center;
         }
 
         .contact-section {
@@ -333,38 +326,13 @@
             padding: 2rem;
             background: white;
             border-radius: 15px;
-            transition: transform 0.3s ease;
-            border: 1px solid #e2e8f0;
             color: #2d3748;
+            transition: transform 0.3s ease;
         }
 
         .contact-card:hover {
             transform: translateY(-5px);
-            background: #f8f9fa;
             border-color: #00d4aa;
-        }
-
-        .contact-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: #00d4aa;
-        }
-
-        .contact-card h3 {
-            margin-bottom: 0.5rem;
-            color: #2d3748;
-            font-weight: 600;
-        }
-
-        .contact-card a {
-            color: #2d3748;
-            text-decoration: none;
-            transition: color 0.3s ease;
-            font-weight: 500;
-        }
-
-        .contact-card a:hover {
-            color: #00d4aa;
         }
 
         footer {
@@ -374,46 +342,10 @@
             padding: 2rem 0;
         }
 
-        .resume-section {
-            background: linear-gradient(135deg, #00d4aa 0%, #00a8e8 100%);
-            color: white;
-        }
-
-        .resume-content {
-            text-align: center;
-        }
-
-        .resume-button {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.2);
-            color: white;
-            padding: 1rem 2rem;
-            text-decoration: none;
-            border-radius: 30px;
-            font-weight: bold;
-            margin-top: 1rem;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
-            border: 2px solid rgba(255, 255, 255, 0.3);
-        }
-
-        .resume-button:hover {
-            background: rgba(255, 255, 255, 0.3);
-            transform: translateY(-2px);
-        }
-
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .nav-links {
-                display: none;
-            }
-            
-            .pro-grid {
-                grid-template-columns: 1fr;
-            }
+            .hero h1 { font-size: 2.5rem; }
+            .nav-links { display: none; }
+            .pro-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -423,6 +355,7 @@
             <a href="#" class="logo">Fatima Zaidan</a>
             <ul class="nav-links">
                 <li><a href="#pro">Professional Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="#resume">Resume</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -434,7 +367,7 @@
             <div class="container">
                 <div class="hero-content">
                     <h1>AI Engineer</h1>
-                    <p>Designing intelligent systems with Generative AI, Agentic Design, and MLOps pipelines for real-world, scalable solutions</p>
+                    <p>Designing intelligent systems with Generative AI, Agentic Design, and MLOps pipelines for real-world, scalable solutions.</p>
                     <a href="#contact" class="cta-button">Let's Connect</a>
                 </div>
             </div>
@@ -445,158 +378,137 @@
                 <h2 class="section-title">Professional Expertise</h2>
                 <div class="pro-grid">
                     <div class="pro-main-card">
-                        <div class="content">
-                            <div class="pro-main-icon">
-                                <i class="fas fa-brain"></i>
-                            </div>
-                            <h3>Generative AI Specialist</h3>
-                            <p>Developing AI applications using advanced generative models, focusing on practical implementations that solve real-world problems with innovative approaches and scalable solutions.</p>
-                        </div>
+                        <div class="pro-main-icon"><i class="fas fa-brain"></i></div>
+                        <h3>Generative AI Specialist</h3>
+                        <p>Developing AI applications using advanced generative models, focusing on real-world problem solving and scalable systems.</p>
                     </div>
-                    
                     <div class="pro-side-card">
-                        <div class="pro-side-icon">
-                            <i class="fas fa-robot"></i>
-                        </div>
+                        <div class="pro-side-icon"><i class="fas fa-robot"></i></div>
                         <h3>Agentic Design</h3>
-                        <p>Specialized in designing intelligent agents with autonomous decision-making capabilities and complex workflow orchestration.</p>
+                        <p>Designing intelligent autonomous agents with decision-making and workflow orchestration capabilities.</p>
                     </div>
-                    
                     <div class="pro-side-card">
-                        <div class="pro-side-icon">
-                            <i class="fas fa-code"></i>
-                        </div>
+                        <div class="pro-side-icon"><i class="fas fa-code"></i></div>
                         <h3>Technical Mastery</h3>
-                        <p>Strong foundation in Python programming and LangChain framework for building sophisticated AI-powered applications.</p>
+                        <p>Proficient in Python and LangChain for developing sophisticated AI-driven applications.</p>
                     </div>
                 </div>
                 <div class="tech-stack">
-                     <span class="tech-tag">Python</span>
-                     <span class="tech-tag">Generative AI</span>
-                     <span class="tech-tag">LLMs</span>
-                     <span class="tech-tag">LangChain</span>
-                     <span class="tech-tag">Agentic Design</span>
-                     <span class="tech-tag">Machine Learning</span>
-                     <span class="tech-tag">AI Pipelines</span>
-                     <span class="tech-tag">CI/CD Basics</span>
-                     <span class="tech-tag">Docker</span>
-                     <span class="tech-tag">AWS</span>
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Generative AI</span>
+                    <span class="tech-tag">LLMs</span>
+                    <span class="tech-tag">LangChain</span>
+                    <span class="tech-tag">Agentic Design</span>
+                    <span class="tech-tag">Machine Learning</span>
+                    <span class="tech-tag">AI Pipelines</span>
+                    <span class="tech-tag">CI/CD</span>
+                    <span class="tech-tag">Docker</span>
+                    <span class="tech-tag">AWS</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS SECTION -->
+        <section id="projects" class="section projects-section">
+            <div class="container">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-icon"><i class="fas fa-comments"></i></div>
+                        <h3>GenAI Assistant</h3>
+                        <p>An intelligent chatbot powered by RAG, LangChain, and OpenAI — deployed on AWS EC2 using Docker and CI/CD automation.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/fatima-zaidan/genai-assistant" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-icon"><i class="fas fa-database"></i></div>
+                        <h3>AI Pipeline Orchestrator</h3>
+                        <p>End-to-end MLOps pipeline for training, deployment, and monitoring with FastAPI, Docker, and AWS Lambda.</p>
+                        <div class="project-links">
+                            <a href="#">GitHub</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-icon"><i class="fas fa-robot"></i></div>
+                        <h3>Autonomous Research Agent</h3>
+                        <p>Agentic workflow for research automation — retrieves, summarizes, and synthesizes papers using LangChain and LLMs.</p>
+                        <div class="project-links">
+                            <a href="#">GitHub</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section id="resume" class="section resume-section">
             <div class="container">
-                <div class="resume-content">
-                    <h2 class="section-title">AI Engineering | Generative AI & MLOps Enthusiast</h2>
-                    <p style="font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.9;">
-                        Passionate about building end-to-end AI solutions, specializing in Generative AI, Agentic Design, and MLOps pipelines. Experienced with CI/CD workflows, Docker, cloud deployment (EC2 & Lambda), and orchestrating scalable, production-ready AI systems. Actively seeking opportunities to contribute to innovative AI projects.
-                    </p>
-                    <a href="Fatima_Zaidan_Resume.pdf" download>
-                        <i class="fas fa-download"></i> Download Resume
-                    </a>
-                </div>
+                <h2 class="section-title">AI Engineering | Generative AI & MLOps Enthusiast</h2>
+                <p style="font-size:1.2rem;margin-bottom:2rem;opacity:0.9;">
+                    Passionate about building end-to-end AI systems — from design to deployment — integrating Generative AI, Agentic Design, and MLOps pipelines.
+                </p>
+                <a href="Fatima_Zaidan_Resume.pdf" download class="resume-button"><i class="fas fa-download"></i> Download Resume</a>
             </div>
         </section>
 
         <section id="contact" class="section contact-section">
-    <div class="container">
-        <h2 class="section-title">Get In Touch</h2>
-        <div class="contact-grid">
-            <div class="contact-card">
-                <div class="contact-icon">
-                    <i class="fab fa-linkedin"></i>
+            <div class="container">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <i class="fab fa-linkedin contact-icon"></i>
+                        <h3>LinkedIn</h3>
+                        <a href="https://www.linkedin.com/in/fatima-zaidan" target="_blank">Connect</a>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fab fa-github contact-icon"></i>
+                        <h3>GitHub</h3>
+                        <a href="https://github.com/fatima-zaidan" target="_blank">View Projects</a>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-envelope contact-icon"></i>
+                        <h3>Email</h3>
+                        <a href="mailto:fatima.zaidan26@gmail.com">fatima.zaidan26@gmail.com</a>
+                    </div>
                 </div>
-                <h3>LinkedIn</h3>
-                <a href="https://www.linkedin.com/in/fatima-zaidan" target="_blank" rel="noopener noreferrer">
-                    Connect with me
-                </a>
             </div>
-
-            <div class="contact-card">
-                <div class="contact-icon">
-                    <i class="fab fa-github"></i>
-                </div>
-                <h3>GitHub</h3>
-                <a href="https://github.com/fatima-zaidan" target="_blank" rel="noopener noreferrer">
-                    View my projects
-                </a>
-            </div>
-
-            <div class="contact-card">
-                <div class="contact-icon">
-                    <i class="fas fa-envelope"></i>
-                </div>
-                <h3>Email</h3>
-                <a href="mailto:fatima.zaidan26@gmail.com">
-                    fatima.zaidan26@gmail.com
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-
+        </section>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Fatima Zaidan. Built with passion for AI innovation.</p>
+            <p>&copy; 2025 Fatima Zaidan — Built with passion for AI innovation.</p>
         </div>
     </footer>
 
     <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', e => {
                 e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    // The scroll-padding-top CSS property (Fix 1) handles the fixed header offset,
-                    // so we can leave 'block: start' here, but it's now optional.
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
+                const t = document.querySelector(a.getAttribute('href'));
+                if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
             });
         });
 
-        // Add scroll effect to header
+        // Header scroll effect
         window.addEventListener('scroll', () => {
             const header = document.querySelector('header');
-            if (window.scrollY > 100) {
-                header.style.background = 'rgba(255, 255, 255, 0.98)';
-            } else {
-                header.style.background = 'rgba(255, 255, 255, 0.95)';
-            }
+            header.style.background = window.scrollY > 100 
+                ? 'rgba(255,255,255,0.98)' 
+                : 'rgba(255,255,255,0.95)';
         });
 
-        // Animate professional cards on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
+        // Card animation
+        const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.style.opacity = '1';
                     entry.target.style.transform = 'translateY(0)';
                 }
             });
-        }, observerOptions);
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-        document.querySelectorAll('.pro-main-card, .pro-side-card').forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(30px)';
-            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(card);
-        });
-
-        // Tech tag animation (no change needed here as the CSS fix above is sufficient)
-        document.querySelectorAll('.tech-tag').forEach((tag, index) => {
-            tag.style.animationDelay = `${index * 0.1}s`;
-        });
-    </script>
-</body>
-</html>
+        document.querySelectorAll('.pro-main-card, .
