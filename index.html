@@ -409,39 +409,157 @@
         </section>
 
         <!-- PROJECTS SECTION -->
-        <section id="projects" class="section projects-section">
-            <div class="container">
-                <h2 class="section-title">Featured Projects</h2>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <div class="project-icon"><i class="fas fa-comments"></i></div>
-                        <h3>GenAI Assistant</h3>
-                        <p>An intelligent chatbot powered by RAG, LangChain, and OpenAI — deployed on AWS EC2 using Docker and CI/CD automation.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/fatima-zaidan/genai-assistant" target="_blank">GitHub</a>
-                        </div>
-                    </div>
+<section id="projects" class="section projects-section">
+  <div class="container">
+    <h2 class="section-title">Featured Projects</h2>
 
-                    <div class="project-card">
-                        <div class="project-icon"><i class="fas fa-database"></i></div>
-                        <h3>AI Pipeline Orchestrator</h3>
-                        <p>End-to-end MLOps pipeline for training, deployment, and monitoring with FastAPI, Docker, and AWS Lambda.</p>
-                        <div class="project-links">
-                            <a href="#">GitHub</a>
-                        </div>
-                    </div>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-icon"><i class="fas fa-comments"></i></div>
+        <h3>GenAI Assistant</h3>
+        <p>
+          An intelligent chatbot powered by RAG, LangChain, and OpenAI deployed
+          on AWS EC2 using Docker and CI/CD automation.
+        </p>
+        <div class="project-links">
+          <a
+            href="https://github.com/fatima-zaidan/genai-rag-deploy.git"
+            target="_blank"
+            >GitHub</a
+          >
+        </div>
+      </div>
 
-                    <div class="project-card">
-                        <div class="project-icon"><i class="fas fa-robot"></i></div>
-                        <h3>Autonomous Research Agent</h3>
-                        <p>Agentic workflow for research automation — retrieves, summarizes, and synthesizes papers using LangChain and LLMs.</p>
-                        <div class="project-links">
-                            <a href="#">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+      <div class="project-card">
+        <div class="project-icon"><i class="fas fa-database"></i></div>
+        <h3>Travel Assistant Agent</h3>
+        <p>
+          Multi-Agent travel assistant using CrewAI to plan complete trips
+          (flight, hotel, tours) and provide personalized recommendations.
+        </p>
+        <div class="project-links">
+          <a
+            href="https://github.com/fatima-zaidan/Travel_Assistant.git"
+            target="_blank"
+            >GitHub</a
+          >
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-icon"><i class="fas fa-robot"></i></div>
+        <h3>Emotion Dataset Classification</h3>
+        <p>
+          Fine-tuned a DistilBERT model on the Go_Emotions dataset for
+          multi-class emotion classification.
+        </p>
+        <div class="project-links">
+          <a
+            href="https://github.com/fatima-zaidan/finetune_LLM.git"
+            target="_blank"
+            >GitHub</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* ✨ PROJECTS SECTION STYLING ✨ */
+.projects-section {
+  background: #f8fafc;
+  padding: 4rem 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #2d3748;
+  margin-bottom: 3rem;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(135deg, #00d4aa, #00a8e8);
+  border-radius: 2px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  text-align: center;
+  border: 2px solid transparent;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+  border-color: #00d4aa;
+}
+
+.project-icon i {
+  font-size: 2.5rem;
+  color: #667eea;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.project-card:hover .project-icon i {
+  transform: scale(1.25) rotate(5deg);
+  color: #00d4aa;
+}
+
+.project-card h3 {
+  color: #2d3748;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.project-card p {
+  color: #4a5568;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.project-links a {
+  display: inline-block;
+  background: linear-gradient(135deg, #00d4aa, #00a8e8);
+  color: white;
+  padding: 0.6rem 1.4rem;
+  border-radius: 25px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.project-links a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 212, 170, 0.4);
+}
+</style>
+
 
         <section id="resume" class="section resume-section">
             <div class="container">
